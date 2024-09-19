@@ -45,7 +45,7 @@ io.on("connection", (socket) => {
   });
 });
 
-httpServer.listen(1122, async () => {
+httpServer.listen(process.env.PORT || 1122, async () => {
   await connect(url).then(() => {
     console.clear();
     console.log("connection established");
