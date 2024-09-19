@@ -21,7 +21,9 @@ app.use(cors());
 
 app.use("/api", user);
 
-const url: string = "mongodb://127.0.0.1:27017/bulkDB";
+const url: string =
+  "mongodb+srv://shecodesaj:shecodesaj@cluster0.xe1jgnf.mongodb.net/pickDB?retryWrites=true&w=majority";
+// const url: string = "mongodb://127.0.0.1:27017/bulkDB";
 
 io.on("connection", (socket) => {
   console.log("A user connected");

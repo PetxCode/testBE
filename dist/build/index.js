@@ -29,7 +29,8 @@ const io = new socket_io_1.Server(httpServer, {
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
 app.use("/api", router_1.default);
-const url = "mongodb://127.0.0.1:27017/bulkDB";
+const url = "mongodb+srv://shecodesaj:shecodesaj@cluster0.xe1jgnf.mongodb.net/pickDB?retryWrites=true&w=majority";
+// const url: string = "mongodb://127.0.0.1:27017/bulkDB";
 io.on("connection", (socket) => {
     console.log("A user connected");
     socket.on("disconnect", () => {
